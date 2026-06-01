@@ -1,0 +1,31 @@
+
+
+
+
+
+A network of towers supports users on a WAN grid. If one tower goes down, it is
+assumed that the network is resilient enough to support customers affected by the
+outage. However, sometimes this is not always the case and an node in the network
+is/can not be supported by an additional tower. 
+
+In both scenarios, it is important to notify customers about the impact of an
+outage and the steps the company is taking to correct the issue.
+
+
+
+Database:
+
+TowerTable:
+  Name<String>
+  Location<Coord>
+  Status<SNMP>
+  Neighbors<Tower>
+
+CustomerTable:
+  Name<String>
+  Address<Address>
+  Contact<ContactInfo>
+
+
+
+  
