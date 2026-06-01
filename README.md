@@ -12,35 +12,11 @@ SPARC automatically partitions affected subscribers, stages high-priority field 
 
 ---
 
-## Architectural Workflow
+## Architecture
 
-```
-       [ Network Telemetry / Edge API ]
-                       │
-                       ▼ (Webhook Payload)
- ┌───────────────────────────────────────────────┐
- │       1. Salesforce Apex REST Endpoint        │
- └──────────────────────┬────────────────────────┘
-                        │ (Instantiates Platform Event)
-                        ▼
- ┌───────────────────────────────────────────────┐
- │      2. Target SQL || SOQL Geolocation Query  │
- └──────────────────────┬────────────────────────┘
-                        │ (Isolates Impacted Customer Node IDs)
-                        ▼
- ┌───────────────────────────────────────────────┐
- │        3. Apex Routing Control                │
- └──────────────────────┬────────────────────────┘
-                        │
-         ┌──────────────┴──────────────┐
-         ▼ (Internal Routing)          ▼ (External Routing)
- ┌──────────────────────────────┐┌──────────────────────────────┐
- │ Salesforce Field Service     ││ Digital Engagement Gateway   │
- │ • Stages Work Orders         ││ • Dispatches SMS Alerts      │
- │ • Allocates Assets/Route     ││ • "We are aware & on it"     │
- └──────────────────────────────┘└──────────────────────────────┘
 
-```
+![Architecture](architecture.png "Architecture")
+
 
 ---
 
