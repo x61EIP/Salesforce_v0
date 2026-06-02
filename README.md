@@ -17,6 +17,8 @@ outage and the steps the company is taking to correct the issue.
 
 Database:
 
+```rust
+
 TowerTable:
   Name<String>
   Location<Coord>
@@ -28,6 +30,7 @@ CustomerTable:
   Address<Address>
   Contact<ContactInfo>
 
+```
 
 
 ---
