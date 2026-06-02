@@ -6,9 +6,29 @@
 
 ## Project Overview
 
-The **Status Page Active Response Coordination (SPARC)** is a proactive customer-experience and field-service workflow solution designed for telecommunications environments. 
+A network of towers supports users on the grid. If one tower goes down, it is
+assumed that the network is resilient enough to support customers affected by the
+outage. However, sometimes this is not always the case and an node in the network
+is/can not be supported by an additional tower. 
 
-SPARC automatically partitions affected subscribers, stages high-priority field service dispatches, and broadcasts proactive notifications, effectively neutralizing inbound support ticket spikes and lowering Mean Time to Repair (MTTR).
+In both scenarios, it is important to notify customers about the impact of an
+outage and the steps the company is taking to correct the issue.
+
+
+Database:
+
+TowerTable:
+  Name<String>
+  Location<Coord>
+  Status<SNMP>
+  Neighbors<Tower>
+
+CustomerTable:
+  Name<String>
+  Address<Address>
+  Contact<ContactInfo>
+
+
 
 ---
 
