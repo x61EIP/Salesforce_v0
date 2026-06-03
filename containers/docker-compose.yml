@@ -1,0 +1,7 @@
+
+services:
+  tower_a:
+    build: ./towers/a
+    ports:
+      - "10000:10000"
+
