@@ -1,7 +1,25 @@
 
 services:
   tower_a:
-    build: ./towers/a
+    build: 
+      context: .
+      dockerfile: towers/a/Dockerfile
+    container_name: tower_a
     ports:
-      - "10000:10000"
+      - "10000:10000/udp"
 
+  tower_b:
+    build: 
+      context: .
+      dockerfile: towers/b/Dockerfile
+    container_name: tower_b
+    ports:
+      - "10001:10000/udp"
+
+  tower_c:
+    build: 
+      context: .
+      dockerfile: towers/c/Dockerfile
+    container_name: tower_c
+    ports:
+      - "10002:10000/udp"

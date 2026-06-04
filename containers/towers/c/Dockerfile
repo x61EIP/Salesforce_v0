@@ -4,10 +4,10 @@ workdir /towers
 copy towers/requirements.txt ./
 run pip install --no-cache-dir -r requirements.txt
 
-copy towers/a/data ./data
-expose 10000 
+copy towers/c/data ./data
+expose 10002 
 
 run useradd towercontroller
 user towercontroller
 
-cmd ["snmpsim-command-responder", "--data-dir=./data", "--agent-udpv4-endpoint=0.0.0.0:10000"]
+cmd ["snmpsim-command-responder", "--data-dir=./data", "--agent-udpv4-endpoint=0.0.0.0:10002"]
