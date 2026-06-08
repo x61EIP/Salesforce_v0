@@ -6,7 +6,7 @@ services:
       dockerfile: towers/a/Dockerfile
     container_name: tower_a
     ports:
-      - "10000:10000/udp"
+      - "10000:10161/udp"
 
   tower_b:
     build: 
@@ -14,7 +14,7 @@ services:
       dockerfile: towers/b/Dockerfile
     container_name: tower_b
     ports:
-      - "10001:10000/udp"
+      - "10001:10161/udp"
 
   tower_c:
     build: 
@@ -22,4 +22,4 @@ services:
       dockerfile: towers/c/Dockerfile
     container_name: tower_c
     ports:
-      - "10002:10000/udp"
+      - "10002:10161/udp"

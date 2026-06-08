@@ -1,2 +1,2 @@
-pysmi == 2.0.0
-snmpsim == 1.2.2
+snmpsim == 1.2.1
+pysmi
