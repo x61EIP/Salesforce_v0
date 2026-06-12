@@ -15,21 +15,26 @@ In both scenarios, it is important to notify customers about the impact of an
 outage and the steps the company is taking to correct the issue.
 
 
-Database:
+Objects:
 
-```rust
+```
+Node:
+    Type: enum { Tower, Router, Home, HeadQuarters }
+    Label: String
+    UUID: node_UUID
 
-TowerTable:
-  Name<String>
-  Location<Coord>
-  Status<SNMP>
-  Neighbors<Tower>
+Edge:
+    From_Node: function
+    To_Node: function
+    Type: enum { Wired, Wireless }
+    UUID: edge_UUID
 
-CustomerTable:
-  Name<String>
-  Address<Address>
-  Contact<ContactInfo>
-
+Customer:
+    Tower: Node.Label
+    Name: String
+    Address: String
+    Contact: String
+    UUID: cust_UUID
 ```
 
 
